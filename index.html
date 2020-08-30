@@ -1,1 +1,1215 @@
-Hello World
+Executive Summary 
+
+The overview of Risk. 
+
+What is Risk? 
+
+What is Threat (Threat actor, threat vector)? 
+
+What is Vulnerability?  
+
+What is impact?  
+
+What is likelihood? 
+
+What is risk appetite? 
+
+What is risk tolerance? 
+
+The seriousness of a risk is based on the likelihood and consequence (impact) of an event occurring.1 
+
+ 
+
+Assumption – All attackers will want to compromise the service. But why? Is it because they can, or is it for intellectual gain, monetary reward, organised crime or economic or state espionage. 
+
+Assumption – Categories of the Attack lifecycle are identifiable. (will we miss the attacks that are not easily grouped?) 
+
+Assumption – Combinations of attacks and multiple coordinated attacks or one attacker using multiple tools can be identified. 
+
+Scope of the CTP risk assessment (SQL Module) – All the attacker is doing is an SQL attack (not blended more complex problem – Network Behaviour) 
+
+Assumption – We need to know the baseline of SQL attacks. (Usually anomaly detection or use libInject to classify the attack) 
+
+This leads to a degree of sophistication as we move through the lifecycle of an attack. 
+
+There are degrees of sophistication. The quality of an individual attack and the quality of multiple attacks when compared in total. 
+
+‘ 
+
+‘ OR 1=1 
+
+Union etc 
+
+Does the attack string have multiple components?  
+
+Is there a deviation from the norm? 
+
+A sophisticated string is one that can be obfuscated, multiple payloads, using administrative database functions or administrative shell commands that are not database admin functions. See SQL definition doc. Part of the sophistication is not just the construction of the string but also how sensible it is to construct that string in that way. 
+
+Assumption: When the environment goes live we can make a better choice from the data received. 
+
+What is risk? 
+
+Risk is a relative value (quantative or qualative) that we give to a scenario where there is an opportunity to be successful (i.e. achieving a positive outcome) or the possibility of being unsuccessful (i.e. resulting in a negative outcome) 
+
+There are many different risk categories which result in different methods to measure the relative values. 
+
+Risk Management  
+
+Risk management refers to the overall method that is used to identify risk, then mitigate the risk and finally continue to monitor the mitigated risk to ensure that it has been kept to an acceptable level. 
+
+Relative risk 
+
+Risk can only be a relative function because it is based upon a baseline that is defined by a risk appetite. The risk appetite is actually a changing value. The appetite is based upon a minimum of knowledge, experience, awareness, learning and hindsight. What is known yesterday may lead to a different outcome based on the knowledge that is known today. What this indicates is that risk is baselined on risk appetite which is influenced by a multitude of different variables, explaining why it is difficult to accurately measure and define the appetite. 
+
+In order to successful communicate risk  
+
+Risk Model 
+
+Risk = Fn(Threat) x Fn(vulnerability) x Fn(Impact) x Fn(Likelihood) 
+
+Confidentiality Integrity and Availability. 
+
+Fn(T) = LikelihoodCapability 
+
+ActorCapability 
+
+IntentDid they achieve what they wanted? 
+
+SourceCapability 
+
+AttackSophistication 
+
+Sophistication 
+
+Capability 
+
+Fn(V) = CVE MITRE definition. 
+
+ 
+
+Fn(I) = Business Owned. 
+
+Success of Attack  
+
+Confidentiality 
+
+Availability 
+
+Integrity 
+
+Fn(L) = Motivation 
+
+Why are they doing it? 
+
+Because they know there is a vulnerability 
+
+They have info that the organisation would want 
+
+Threat would have an impact on it. 
+
+The more value a target (i.e. the higher the impact) the more likely they will attack. Higher profile. 
+
+ 
+
+ 
+
+Risk – Fn(Sophistication) x Fn(Capability) 
+
+ 
+
+Effectiveness? 
+
+Persitence? 
+
+Intent 
+
+ 
+
+One attack 
+
+One attack – One response 
+
+Category of attacks. 
+
+Term 
+
+Definition 
+
+Cyber 
+
+For the purpose of the Cyber Threat Profiler it refers to all logical aspects of an IT system. It is understood that the true Cyber meaning could encompass more than the logical. 
+
+Threat 
+
+Any external individual (or event) with the potential and intent to adversely impact an IT system through unauthorised access, destruction, modification and/or exfiltration of data, and/or denial of service. Threat is viewed and evaluated from an internal perspective. 
+
+Vulnerability 
+
+Any software, hardware or procedural weakness that could provide an attacker opportunity to gain unauthorised or authorised (e.g. insider threat) access to the sensitive assets and resources of a system for the purposes of exercising a threat. Threats exploit vulnerabilities. The risk associated with a known vulnerability will escalate with the degree of pertinent knowledge and capability a threat agent possess with respect to that vulnerability. 
+
+Risk 
+
+Risk is a function of the perceived likelihood of a threat agent exploiting an existing vulnerability and the level of adverse impact that might result. 
+
+Defence 
+
+The deployment (or potential deployment) of hardware, software, people or procedures to mitigate vulnerabilities and the adverse impact of actual or potential attacks by threat agents. 
+
+Capability 
+
+The knowledge and resources available to a threat agent amplified by the intent and persistence demonstrated by the agent. 
+
+Sophistication 
+
+The orchestrated use of knowledge and resources to effect and attack and achieve attack objectives.  
+
+A threat agent might demonstrate high degrees of sophistication by exploiting multiple vulnerabilities (serially or in parallel) to achieve end objectives, including an objective to remain undiscovered. 
+
+ 
+
+Effectiveness 
+
+How good is the attack at compromising the vulnerability. 
+
+ 
+
+Page Break
+ 
+
+Taken from a book! 
+
+While there are a number of ways to identify, analyse, and assess risk and considerable discussion of “risk” in the media and among information security professionals, there is little real understanding of the process and metrics of analysing and assessing risk. Certainly everyone understands that “taking a risk” means “taking a chance,” but a risk or chance of what is often not so clear. 
+
+ 
+
+When one passes on a curve or bets on a horse, one is taking a chance of suffering harm/injury or financial loss — an undesirable outcome. We usually give more or less serious consideration to such an action before taking the chance, so to speak. Perhaps we would even go so far as to calculate the odds (chance) of experiencing the undesirable outcome and, further, take steps to reduce the chance of experiencing the undesirable outcome. 
+
+ 
+
+In order to effectively calculate the chance of experiencing the undesirable outcome, as well as its magnitude, one must have an awareness of the elements of risk and their relationship to each other. This, in a nutshell, is the process of risk analysis and assessment. 
+
+ 
+
+Knowing more about the risk, one is better prepared to decide what to do about it — accept the risk as now assessed (go ahead and pass on the blind curve or make that bet on the horses), or do something to reduce the risk to an acceptable level (wait for a safe opportunity to pass or put the bet money in a savings account with guaranteed interest). This is the process of risk mitigation or risk reduction. 
+
+ 
+
+There is a third choice: to transfer the risk, i.e., buy insurance. However prudent good insurance may be, all things considered, having insurance will not prevent the undesirable outcome, it will only serve to make some compensation — almost always less than complete — for the loss. Further, some risks such as betting on a horse are uninsurable. 
+
+ 
+
+The processes of identifying, analyzing and assessing, mitigating, or transferring risk is generally characterized as Risk Management. There are thus a few key questions that are at the core of the Risk Management process: 
+
+ 
+
+1.  What could happen (threat event)? 
+
+2.  If it happened, how bad could it be (threat impact)? 
+
+3.  How often could it happen (threat frequency, annualized)? 
+
+4.  How certain are the answers to the first three questions (recognition of uncertainty)? 
+
+These questions are answered by analysing and assessing risk. 
+
+ 
+
+Uncertainty is the central issue of risk. Sure, one might pass successfully on the curve or win big at the races, but does the gain warrant taking the risk? Do the few seconds saved with the unsafe pass warrant the possible head-on collision? Are you betting this month’s paycheck on a long shot to win? Cost/benefit analysis would most likely indicate that both of these examples are unacceptable risks. 
+
+ 
+
+Prudent management, having analysed and assessed the risks by securing credible answers to these four questions, will almost certainly find there to be some unacceptable risks as a result. Now what? Three questions remain to be answered: 
+
+ 
+
+1.  What can be done (risk mitigation)? 
+
+2.  How much will it cost (annualized)? 
+
+3.  Is it cost effective (cost/benefit analysis)? 
+
+Answers to these questions, decisions to budget and execute recommended activities, and the subsequent and ongoing management of all risk mitigation measures — including periodic reassessment — comprise the balance of the Risk Management paradigm. 
+
+ 
+
+Information Risk Management is an increasingly complex and dynamic task. In the budding Information Age, the technology of information storage, processing, transfer, and access has exploded, leaving efforts to secure that information effectively in a never-ending catch-up mode. For the risks potentially associated with information and information technology (IT) to be identified and managed cost-effectively, it is essential that the process of analysing and assessing risk is well understood by all parties and executed on a timely basis. This chapter is written with the objective of illuminating the process and the issues of risk analysis and assessment. 
+
+Risk can mean many thinks to many people. Where ever risk is used, the context within which it is used, must be fully understood. 
+
+The process of risk management is designed to reduce or eliminate the risk of certain kinds of events happening or having an impact on the business. 
+
+Risk management involves balancing risks and rewards. 
+
+Risk Management is the mechanism by which all aspects of risk is understood, documented, articulated, treated.  
+
+The model postulates that everyone has a propensity to take risks  
+
+this propensity varies from one individual to another  
+
+this propensity is influenced by the potential rewards of risk taking  
+
+perception's of risk are influenced by experience of accident losses - one's own and others'  
+
+individual risk taking decisions represent a balancing act in which perceptions of risk are weighed against propensity to take risk  
+
+accident losses are, by definition, a consequence of taking risks; the more risks an individual takes, the greater, on average, will be both the rewards and losses they incur. 
+
+Where risks are directly perceptible, 
+
+everyone takes risks; everyone is a risk manager; 
+
+taking risks leads, by definition, to accidents; the pursuit of a world free of accidents is a futile exercise; 
+
+it is important to distinguish self-risk (e.g., driving without a seat belt) from behaviour that puts others at risk (e.g., driving at 100 mph down a busy shopping street); the second is a legitimate area for regulation; the first is not;45  
+
+attempts to criminalize self-risk are likely to be worse than useless; they are likely to redistribute the burden of risk in ways that harm innocent third parties; 
+
+everyone has a risk thermostat, and he may adjust it so that he has the risk level he likes regardless of the experts' best efforts to decrease risk; 
+
+institutional risk managers who do not take account of the reasons that people have for taking and balancing risks – the rewards of risk – will be frustrated. 
+
+Where risks are perceived with the help of science, 
+
+science can reduce uncertainty by illuminating the connection between behaviour and consequence; 
+
+science, effectively communicated, can defeat superstition and purely imaginary scares; but 
+
+science cannot provide "objective" measures of risk; 
+
+risks come in many incommensurable forms that defy reduction to a common denominator; 
+
+the act of measurement alters that which is being measured; 
+
+risk is a reflexive phenomenon; in managing risks we are continually modifying them; in the realm of risk a Heisenberg principle probably rules. 
+
+Where scientists don't know or cannot agree, 
+
+we are in the realm of virtual risk where plural rationalities contend; 
+
+virtual risks are cultural constructs; 
+
+they may or may not be real – science cannot settle the issue – but they have real consequences; 
+
+the precautionary principle is of no help; different rationalities adhere to very different versions of the principle; 
+
+virtual risks are a fact of life; science will never have all the answers; 
+
+humility in the face of ignorance is a precondition for civilised debate about virtual risks. 
+
+There are many types of risk catagory:  
+
+Business 
+
+Financial 
+
+IT 
+
+Information 
+
+Information Security 
+
+Project Management 
+
+Natural Disasters 
+
+Medical 
+
+Energy 
+
+Business Continuity  
+
+Legal 
+
+Compliance 
+
+ 
+
+It is not possible to create one generic high level risk model using the same input categories for each of the above risk types. The construct of a risk model depends on the category that is being modelled. 
+
+However with any category there are two types of risk outcome: a positive outcome or a negative outcome. risk2  
+
+Negative outcome is associated with situation where bad outcomes occur. This is more commonly known as Risk.  
+
+Positive risk is where the outcome is favourable. This is known as Opportunity.  
+
+It is wrong to exclude opportunity when examining risk of a particular category. 
+
+Without many realising, we all take risks in the hope of achieving a positive outcome, otherwise nothing would happen and the advancement and modernisation of civilisation would never have happened. However most people would only take these steps to advancement (positive risk) after careful consideration and an appreciation of the consequences should the risk fail. 
+
+Everyone is doing a risk assessment all the time. Is it safe to cross the road? If you cross without incident, then outcome is that you make it across and you can continue on home. However if the time crossing of the road badly, and you end up being hit by a car. The risk of crossing the road has been realised and there is seriously negative consequence of the action, worst case being death! Crossing the road is usual carried out when the person is in full control of their faculties, they have thoroughly assessed the situation and are confident that they do not need more information to allow them to make the decision with a good degree of competency that they are in full ownership of the facts. If that full confidence is in place, cross the road, knowing that from your qualified and up to date assessment there is no car coming towards you. Assessing the situation with full facts is critical. That is why you would not normally cross the road on a blind bend. You have no idea what is around that corner. 
+
+Risk appetite controls the decision process of whether to cross the road or not. Generally sensible people will approach the analogy of crossing the road with the cautious risk appetite. Most people want to cross the road and make it to the other side without being hurt or worse case, dying.  
+
+What controls our actions to take a risk? Our risk appetite. We generally only carry out an action that has a positive outcome as our risk appetite usually says that we must only take actions where the outcome does not injure us or worse. This is akin to saying we will not take a risk if on balance the outcome of the action is going to harm us.  
+
+However this assumes a standard situation where the need to cross the road is to enable visiting the shops or services that are on the other side. As with life, a standard/average situation is not representative of the context, the reason or need to cross the road. What happens if you are being harassed and you stand less chance of being harassed if you cross the road. But the road is a busy main road and you are too scared to stand still and wait for the pelican crossing lights to stop the flow of traffic. What happens? The risk tolerance of accepting the potential consequence of the risk changes. The risk tolerance is a variable threshold that takes into account the context of the situation. Risk appetite is a very static defined threshold, given all things being equal including a default context, then if the road is clear and there are no cars on either side of the road, or they are far enough away, then the threshold is achieved and the crossing can occur. 
+
+How does this general modern decision making process for living map across to the Information Security world? General safe living is one category of the risk management portfolio.  
+
+There are numerous categories ranging from Project Management, Business Management, Strategy, IT Management all the way through to Information Security. They all follow the above principle of risk management 
+
+Qualitative/quantitative — These terms indicate the (oversimplified) binary categorization of risk metrics and information risk management techniques. In reality, there is a spectrum across which these terms apply, virtually always in combination. This spectrum may be described as the degree to which the risk management process is quantified. If all elements — asset value, impact, threat frequency, safeguard effectiveness, safeguard costs, uncertainty, and probability — are quantified, the process may be characterized as fully quantitative. It is virtually impossible to conduct a purely quantitative risk management project, because the quantitative measurements must be applied to the qualitative properties, i.e., characterizations of vulnerability of the target environment. For example, “failure to impose logical access control” is a qualitative statement of vulnerability. However, it is possible to conduct a purely qualitative risk management project. A vulnerability analysis, for example, may identify only the absence of risk-reducing countermeasures, such as logical access controls (though even this simple qualitative process has an implicit quantitative element in its binary yes/no method of evaluation). In summary, risk assessment techniques should be described not as either qualitative or quantitative but in terms of the degree to which such elementary factors as asset value, exposure factor, and threat frequency are assigned quantitative values. 
+
+ 
+
+Probability — This term characterizes the chance or likelihood, in a finite sample, that an event will occur. For example, the probability of getting a 6 on a single roll of a die is 1/6, or 0.16667. The possible range of probability values is 0.0 to 1.0. A probability of 1.0 expresses certainty that the subject event will occur within the finite interval. Conversely, a probability of 0.0 expresses certainty that the subject event will not occur within the finite interval. 
+
+What is the difference between probability and uncertainty? 
+
+Risk — The potential for harm or loss is best expressed as the answers to these four questions: 
+
+ 
+
+What could happen? (What is the threat?) 
+
+How bad could it be? (What is the impact or consequence?) 
+
+How often might it happen? (What is the frequency?) 
+
+How certain are the answers to the first three questions? (What is the degree of confidence?) 
+
+The key element among these is the issue of uncertainty captured in the fourth question. If there is no uncertainty, there is no “risk” per se. 
+
+Information asset — This term, in general, represents the body of information an organization must have to conduct its mission or business. A specific information asset may consist of any subset of the complete body of information, i.e., accounts payable, inventory control, payroll, etc. Information is regarded as an intangible asset separate from the media on which it resides. There are several elements of value to be considered: first is the simple cost of replacing the information, second is the cost of replacing supporting software, and third through the fifth is a series of values that reflect the costs associated with loss of the information’s confidentiality, availability, and integrity. Some consider the supporting hardware and netware to be information assets as well. However, these are distinctly tangible assets. Therefore, using tangibility as the distinguishing characteristic, it is logical to characterize hardware differently than the information itself. Software, on the other hand, is often regarded as information. These five elements of the value of an information asset often dwarf all other values relevant to an assessment of risk. It should be noted as well that these elements of value are not necessarily additive for the purpose of assessing risk. In both assessing risk and establishing cost justification for risk-reducing safeguards, it is useful to be able to isolate safeguard effects among these elements. Clearly, for an organization to conduct its mission or business, the necessary information must be present where it is supposed to be, when it is supposed to be there, and in the expected form. Further, if desired confidentiality is lost, results could range from no financial loss if confidentiality is not an issue, to loss of market share in the private sector, to compromise of national security in the public sector.  
+
+Risk analysis — This term represents the process of analyzing a target environment and the relationships of its risk-related attributes. The analysis should identify threat vulnerabilities, associate these vulnerabilities with affected assets, identify the potential for and nature of an undesirable result, and identify and evaluate risk-reducing countermeasures. 
+
+ 
+
+Risk assessment — This term represents the assignment of value to assets, threat frequency (annualized), consequence (i.e., exposure factors), and other elements of chance. The reported results of risk analysis can be said to provide an assessment or measurement of risk, regardless of the degree to which quantitative techniques are applied. For consistency in this chapter, the term risk assessment hereafter is used to characterize both the process and the result of analyzing and assessing risk. 
+
+Risk management — This term characterizes the overall process. The first, or risk assessment, phase includes identifying risks, risk-reducing measures, and the budgetary impact of implementing decisions related to the acceptance, avoidance, or transfer of risk. The second phase of risk management includes the process of assigning priority to, budgeting, implementing, and maintaining appropriate risk-reducing measures. Risk management is a continuous process of ever-increasing complexity. 
+
+Safeguard — This term represents a risk-reducing measure that acts to detect, prevent, or minimize loss associated with the occurrence of a specified threat or category of threats. Safeguards are also often described as controls or countermeasures. 
+
+Safeguard effectiveness — This term represents the degree, expressed as a percent, from 0 to 100%, to which a safeguard may be characterized as effectively mitigating a vulnerability (defined below) and reducing associated loss risks. 
+
+Single loss expectancy or exposure (SLE) — This value is classically derived from the following algorithm to determine the monetary loss (impact) for each occurrence of a threatened event: 
+
+          ASSET VALUE x EXPOSURE FACTOR = SINGLE LOSS EXPECTANCY 
+
+The SLE is usually an end result of a business impact analysis (BIA). A BIA typically stops short of evaluating the related threats’ ARO or its significance. The SLE represents only one element of risk, the expected impact, monetary or otherwise, of a specific threat event. Because the BIA usually characterizes the massive losses resulting from a catastrophic event, however improbable, it is often employed as a scare tactic to get management attention and loosen budgetary constraints, often unreasonably. 
+
+Threat — This term defines an event (e.g., a tornado, theft, or computer virus infection), the occurrence of which could have an undesirable impact. 
+
+Threat-Source: Either (1) intent and method targeted at the intentional exploitation of a vulnerability or (2) a situation and method that may accidentally trigger a vulnerability. 
+
+Uncertainty — This term characterizes the degree, expressed as a percent, from 0.0 to 100%, to which there is less than complete confidence in the value of any element of the risk assessment. Uncertainty is typically measured inversely with respect to confidence, i.e., if confidence is low, uncertainty is high. 
+
+Vulnerability — This term characterizes the absence or weakness of a risk-reducing safeguard. It is a condition that has the potential to allow a threat to occur with greater frequency, greater impact, or both. For example, not having a fire suppression system could allow an otherwise minor, easily quenched fire to become a catastrophic fire. Both expected frequency (ARO) and exposure factor (EF) for fire are increased as a consequence of not having a fire suppression system. 
+
+Identify and Measure Risk 
+
+ 
+
+Once IRM policy, team, and risk assessment methodology and tool are established and acquired, the first risk assessment will be executed. This first risk assessment should be as broadly scoped as possible, so that (1) management gets a good sense of the current status of information security, and (2) management has a sound basis for establishing initial risk acceptance criteria and risk mitigation priorities. 
+
+ 
+
+Project sizing — This task includes the identification of background, scope, constraints, objectives, responsibilities, approach, and management support. Clear project-sizing statements are essential to a well-defined and well-executed risk assessment project. It should also be noted that a clear articulation of project constraints (what is not included in the project) is very important to the success of a risk assessment. 
+
+ 
+
+Threat analysis — This task includes the identification of threats that may adversely impact the target environment. 
+
+ 
+
+Asset identification and valuation — This task includes the identification of assets, both tangible and intangible, their replacement costs, and the further valuing of information asset availability, integrity, and confidentiality. These values may be expressed in monetary (for quantitative) or nonmonetary (for qualitative) terms. This task is analogous to a BIA in that it identifies what assets are at risk and their value. 
+
+ 
+
+Vulnerability analysis — This task includes the identification of vulnerabilities that could increase the frequency or impact of threat event(s) affecting the target environment. 
+
+ 
+
+Risk evaluation — This task includes the evaluation of all collected information regarding threats, vulnerabilities, assets, and asset values in order to measure the associated chance of loss and the expected magnitude of loss for each of an array of threats that could occur. Results are usually expressed in monetary terms on an annualized basis (ALE) or graphically as a probabilistic “risk curve” for a quantitative risk assessment. For a qualitative risk assessment, results are usually expressed through a matrix of qualitative metrics such as ordinal ranking (low, medium, high, or 1, 2, 3). 
+
+Finally, with regard to resistance, when risk assessment had to be done manually, or could be done only qualitatively, the fact that the process could take many months to execute and that it was not amenable to revision or “what if” assessment was a credible obstacle to its successful use. But that is no longer the case. Some specific benefits are described below: 
+
+ 
+
+•  Risk assessment helps management understand: 
+
+1.  What is at risk? 
+
+2.  The value at risk — as associated with the identity of information assets and with the confidentiality, availability, and integrity of information assets. 
+
+3.  The kinds of threats that could occur and their financial consequences annualized. 
+
+4.  Risk mitigation analysis. What can be done to reduce risk to an acceptable level. 
+
+5.  Risk mitigation costs (annualized) and associated cost/benefit analysis. Whether suggested risk mitigation activity is cost-effective. 
+
+•  Risk assessment enables a strategic approach to risk management. In other words, possible changes being considered for the IT environment can be assessed to identify the least risk alternative before funds are committed to any alternative. This information complements the standard business case for change and may produce critical decision support information that could otherwise be overlooked. 
+
+•  “What if” analysis is supported. This is a variation on the strategic approach to risk management. Alternative approaches can be considered and their associated level of risk compared in a matter of minutes. 
+
+•  Results are timely — a risk assessment can be completed in a matter of a few days to a few weeks. Risk assessment no longer has to take many months to execute. 
+
+•  Information security professionals can present their recommendations with credible statistical and financial support. 
+
+•  Management can make well-informed risk management decisions. 
+
+•  Management can justify, with quantitative tools, information security budgets/expenditures that are based on a reasonably objective risk assessment. 
+
+•  Good information security supported by quantitative risk assessment, will ensure an efficient, cost-effective IT environment. 
+
+•  Management can avoid spending that is based solely on a perception of risk. 
+
+•  A risk management program based on the sound application of quantitative risk assessment can be expected to reduce liability exposure and insurance costs. 
+
+As characterized briefly above, there are two fundamentally different metric schemes applied to the measurement of risk elements, qualitative and quantitative. The earliest efforts to develop an information risk assessment methodology were reflected originally in the National Bureau of Standards (now the National Institute of Standards & Technology [NIST] FIPSPUB-31 Automated Data Processing Physical Security and Risk Management, published in 1974. That idea was subsequently articulated in detail with the publication of FIPSPUB-65 Guidelines for Automated Data Processing Risk Assessment, published in August of 1979. This methodology provided the underpinnings for OMB A-71, a federal requirement for conducting “quantitative risk assessment” in the federal government’s information processing environments. 
+
+ 
+
+Early efforts to conduct quantitative risk assessments ran into considerable difficulty. First, because no initiative was executed to establish and maintain an independently verifiable and reliable set of risk metrics and statistics, everyone came up with their own approach; second, the process, while simple in concept, was complex in execution; and third, large amounts of data were collected that required substantial and complex mapping, pairing, and calculation to build representative risk models; fourth, with no software and desktop computers just over the horizon, the work was done manually — a very tedious and time-consuming process. Results varied significantly. 
+
+ 
+
+As a consequence, while some developers launched and continued efforts to develop credible and efficient automated quantitative risk assessment tools, others developed more expedient qualitative approaches that did not require independently objective metrics, and OMB A-130, an update to OMB A-71, was released lifting the “quantitative” requirement for risk assessment in the federal government. These qualitative approaches enabled a much more subjective approach to the valuation of information assets and the scaling of risk. In Exhibit 1, for example, the value of the availability of information and the associated risk were described as “low,” “medium,” or “high” in the opinion of knowledgeable management, as gained through interview or questionnaires. 
+
+Often, when this approach is taken, a strategy is defined wherein the highest risk exposures (darkest shaded areas) require prompt attention, the moderate risk exposures (lightly shaded areas) require plans for corrective attention, and the lowest risk exposures (unshaded areas) can be accepted. 
+
+ 
+
+Elements of Risk Metrics 
+
+ 
+
+There are six primitive elements of risk modeling to which some form of metric can be applied: 
+
+ 
+
+Asset Value 
+
+Threat Frequency 
+
+Threat Exposure Factor 
+
+Safeguard Effectiveness 
+
+Safeguard Cost 
+
+Uncertainty 
+
+To the extent that each of these elements is quantified in independently objective metrics such as monetary replacement value for Asset Value or Annualized Rate of Occurrence for Threat Frequency, the risk assessment is increasingly quantitative. If all six elements are quantified with independently objective metrics, the risk assessment is fully quantified, and the full range of statistical analyses is supported. 
+
+Quantitative Elements 
+
+ 
+
+Only the Asset Value and Safeguard Cost can be expressed as a monetary value. All other risk elements are effectively multipliers to (1) annualize, e.g., Annualized Rate of Occurrence (1/10 = once in ten years), (2) show an expected percentage of loss against asset value should a threat occur, e.g., $1.0M x 50% = $500K, (3) rate safeguard effectiveness in mitigating a vulnerability, e.g., 80% effective, or (4) rate uncertainty, e.g., I am 90% certain that these numbers are accurate. 
+
+ 
+
+The Bounded Distribution is a means of expressing all quantitative metrics not simply as a discrete value ($1.0M), but rather as a range that explicitly articulates uncertainty about the value, e.g., I am 80% certain that the customer file will cost between $175K and $195K to replace. Or, the USGS is 60% certain there will be an earthquake of 7.0 Richter or greater on the San Andreas fault in the next 20 years. The Bounded Distribution also has the advantage of making it easier to reach consensus on a value (such as the value of availability) where it is not otherwise readily available, as, for example, a “book value” from the general ledger might be. 
+
+Qualitative Elements 
+
+ 
+
+Since the qualitative metrics are all subjective in nature, virtually every risk element can be characterized by the first two metrics, “Low, Medium, and High,” or “Ordinal Ranking.” “Vital, Critical, and Important,” however, are descriptive only of an asset’s value to an organization. 
+
+ 
+
+The Baseline approach makes no effort to scale risk or to value information assets. Rather, the Baseline approach seeks to identify in-place safeguards, compare those with what industry peers are doing to secure their information, then enhance security wherever it falls short of industry peer security. A further word of caution is appropriate here. The Baseline approach is founded on an interpretation of “due care” that is at odds with the well-established legal definition of due care. Organizations relying solely on the Baseline approach could find themselves at a liability risk with an inadequate legal defense should a threat event cause a loss that could have been prevented by available technology or practice that was not implemented because the Baseline approach was used. 
+
+ 
+
+The classic quantitative algorithm, as presented in FIPSPUB-65, that laid the foundation for information security risk assessment is simple: 
+
+ 
+
+      (Asset Value x Exposure Factor = Single Loss Expectancy) x 
+
+      Annualized Rate of Occurrence = Annualized Loss Expectancy 
+
+For example, let’s look at the risk of fire. Assume the Asset Value is $1M, the exposure factor is 50%, and the Annualized Rate of Occurrence is 1/10 (once in ten years). Plugging these values into the algorithm yields the following: 
+
+ 
+
+             ($1M x 50% = $500K) x 1/10 = $50K 
+
+Using conventional cost/benefit assessment, the $50K ALE represents the cost/benefit break-even point for risk mitigation measures. In other words, the organization could justify spending up to $50K per year to prevent the occurrence or reduce the impact of a fire. 
+
+ 
+
+It is true that the classic FIPSPUB-65 quantitative risk assessment took the first steps toward establishing a quantitative approach. However, in the effort to simplify fundamental statistical analysis processes so that everyone could readily understand, the algorithms developed went too far. The consequence was results that had little credibility for several reasons, three of which follow: 
+
+ 
+
+•  The classic algorithm addresses all but two of the elements: recommended safeguard effectiveness, and uncertainty. Both of these must be addressed in some way, and uncertainty, the key risk factor, must be addressed explicitly. 
+
+•  The algorithm cannot distinguish effectively between low frequency/high impact threats and high frequency/low impact threats. Therefore, associated risks can be significantly misrepresented. 
+
+•  Each element is addressed as a discrete value, which, when considered with the failure to address uncertainty explicitly, makes it difficult to actually model risk and illustrate probabilistically the range of potential undesirable outcomes. 
+
+Yes, this primitive algorithm did have shortcomings, but advances in quantitative risk assessment technology and methodology to explicitly address uncertainty and support technically correct risk modeling have largely done away with those problems. 
+
+ 
+
+Pros and Cons of Qualitative and Quantitative Approaches 
+
+ 
+
+In this brief analysis, the features of specific tools and approaches will not be discussed. Rather, the pros and cons associated in general with qualitative and quantitative methodologies will be addressed. 
+
+ 
+
+Qualitative — Pros 
+
+ 
+
+•  Calculations, if any, are simple and readily understood and executed. 
+
+•  It is usually not necessary to determine the monetary value of information (its availability, confidentiality, and integrity). 
+
+•  It is not necessary to determine quantitative threat frequency and impact data. 
+
+•  It is not necessary to estimate the cost of recommended risk mitigation measures and calculate cost/benefit. 
+
+•  A general indication of significant areas of risk that should be addressed is provided. 
+
+Qualitative — Cons 
+
+ 
+
+•  The risk assessment and results are essentially subjective in both process and metrics. The use of independently objective metrics is eschewed. 
+
+•  No effort is made to develop an objective monetary basis for the value of targeted information assets. Hence, the perception of value may not realistically reflect actual value at risk. 
+
+•  No basis is provided for cost/benefit analysis of risk mitigation measures, only subjective indication of a problem. 
+
+•  It is not possible to track risk management performance objectively when all measures are subjective. 
+
+Quantitative — Pros 
+
+ 
+
+•  The assessment and results are based substantially on independently objective processes and metrics. Thus meaningful statistical analysis is supported. 
+
+•  The value of information (availability, confidentiality, and integrity), as expressed in monetary terms with supporting rationale, is better understood. Thus, the basis for expected loss is better understood. 
+
+•  A credible basis for cost/benefit assessment of risk mitigation measures is provided. Thus, information security budget decision-making is supported. 
+
+•  Risk management performance can be tracked and evaluated. 
+
+•  Risk assessment results are derived and expressed in management’s language, monetary value, percentages, and probability annualized. Thus risk is better understood. 
+
+Quantitative — Cons 
+
+ 
+
+•  Calculations are complex. If they are not understood or effectively explained, management may mistrust the results of “black box” calculations. 
+
+•  It is not practical to attempt to execute a quantitative risk assessment without using a recognized automated tool and associated knowledge bases. A manual effort — even with the support of a spreadsheet and generic statistical software — can easily take 10 to 20 times the work effort required with the support of a good automated risk assessment tool. 
+
+•  A substantial amount of information about the target information and its IT environment must be gathered. 
+
+•  As of this writing, there is not yet a standard, independently developed, and maintained threat population and threat frequency knowledge base. Thus user must rely on the credibility of the vendors who develop and support extant automated tools or do threat research on their own. 
+
+There is still confusion as to the difference between a Business Impact Analysis (BIA) and risk assessment. It is not unusual to hear the terms used interchangeably. But that is not correct. A BIA, at the minimum, is the equivalent of one task of a risk assessment — Asset Valuation, a determination of the value of the target body of information and its supporting information technology resources to the organization. At the most, the BIA will develop the equivalent of a Single Loss Exposure, with supporting details, of course, usually based on a worst-case scenario. The results are most often used to convince management that they should fund development and maintenance of a contingency plan. Information security is much more than contingency planning. A BIA often requires 75 to 100% or more of the work effort (and associated cost) of a risk assessment, while providing only a small fraction of the useful information provided by the same effort spent on a risk assessment. A BIA includes little if any vulnerability assessment, and no sound basis for cost/benefit analysis. 
+
+There are a number of approaches to this task, and the amount of time it takes to execute will depend on the approach as well as whether it is qualitative or quantitative. As a general rule of thumb, however, one could expect all but the most cursory qualitative approach to require one to four hours of continuous time from two to five key-knowledgeable staff for each intangible information asset valued. 
+
+ 
+
+Experience has shown that the Modified Delphi approach is the most efficient, useful, and credible. For detailed guidance, refer to the Guideline for Information Valuation (GIV) published by the Information System Security Association (ISSA). This approach will require (typically) the participation of three to five staff knowledgeable on various aspects of the target information asset. A Modified Delphi meeting routinely lasts 4 hours, so, for each target information asset, key staff time of 12 to 16 hours will be expended in addition to about 12 to 20 hours total for a meeting facilitator (4 hours) and a scribe (8 to 16 hours). 
+
+ 
+
+Providing this information has proven to be a valuable exercise for the source participants and the organization by giving them significant insight into the real value of the target body of information and the consequences of losing confidentiality, availability, or integrity. Still, this information alone should not be used to support risk mitigation cost/benefit analysis. 
+
+ 
+
+While this “Diversion of Resources” may be viewed initially by management with some trepidation, the results have invariably been judged more than adequately valuable to justify the effort. 
+
+ 
+
+Conducting the Vulnerability Analysis 
+
+ 
+
+This task, which consists of identifying vulnerabilities, can and should take no more than 5 work days — about 40 hours — of one-on-one meetings with staff responsible for managing or administering the controls and associated policy, e.g., logical access controls, contingency planning, change control, etc. The individual meetings — actually, guided interviews, ideally held in the interviewees’ workspace, should take no more than a couple of hours. Often, these interviews take as little as 5 minutes. Collectively, however, the interviewees’ total diversion could add up to as much as 40 hours. The interviewer will, of course, spend matching time, hour for hour. This one-on-one approach minimizes disruption while maximizing the integrity of the vulnerability analysis by assuming a consistent level-setting with each interviewee. 
+
+ 
+
+PreviousTable of ContentsNext 
+
+ 
+
+ 
+
+Credibility of the Numbers 
+
+ 
+
+Twenty years ago, the task of coming up with “credible” numbers for information asset valuation, threat frequency and impact distributions, and other related risk factors was daunting. Since then, the GIV was published, and significant progress has been made by some automated tools’ handling of the numbers and their associated knowledge bases. The knowledge bases that were developed on the basis of significant research do establish credible numbers. And, credible results are provided, if proven algorithms with which to calculate illustrative risk models are used. 
+
+ 
+
+However, manual approaches or automated tools that require the users to develop the necessary quantitative data are susceptible to a much greater degree of subjectivity and poorly informed assumptions. In the past couple of years, there have been some exploratory efforts to establish a Threat Research Center tasked with researching and establishing: 
+
+ 
+
+1.  A standard Information security threat population, 
+
+2.  Associated threat frequency data, and 
+
+3.  Associated threat scenario and impact data; 
+
+and maintaining that information while assuring sanitized source channels that protect the providers of impact and scenario information from disclosure. As recognition of the need for strong information security and associated risk assessment continues to increase, the pressure to launch this function will eventually be successful. 
+
+ 
+
+Subjectivity 
+
+ 
+
+The ideal in any analysis or assessment is complete objectivity. Just as there is a complete spectrum from qualitative to quantitative, there is a spectrum from subjective to increasingly objective. As more of the elements of risk are expressed in independently objective terms, the degree of subjectivity is reduced accordingly, and the results will have demonstrable credibility. 
+
+ 
+
+Conversely, to the extent a methodology depends on opinion, point of view, bias, or ignorance (subjectivity), the results will be of increasingly questionable utility. Management is loathe to make budgetary decisions based on risk metrics that express value and risk in terms such as low, medium, and high. 
+
+ 
+
+There will always be some degree of subjectivity in assessing risks. However, to the extent that subjectivity is minimized by the use of independently objective metrics, and the biases of tool developers, analysts, and knowledgeable participants are screened, reasonably objective, credible risk modeling is achievable. 
+
+ 
+
+Utility of Results 
+
+ 
+
+Ultimately, each of the above factors (Diversion of Resources, Credibility of the Numbers, Subjectivity, and, in addition, Timeliness) plays a role in establishing the utility of the results. Utility is often a matter of perception. If management feels that the execution of a risk assessment is diverting resources from their primary mission inappropriately, if the numbers are not credible, if the level of subjectivity exceeds an often intangible cultural threshold for the organization, or if the project simply takes so long that the results are no longer timely, then the attention and trust of management will be lost or reduced along with the utility of the results. 
+
+ 
+
+A risk assessment executed with the support of contemporary automated tools can be completed in a matter of weeks, not months. Developers of the best automated tools have done significant research into the qualitative elements of good control, and their qualitative vulnerability assessment knowledge bases reflect that fact. The same is true with regard to their quantitative elements. Finally, in building these tools to support quantitative risk assessment, successful efforts have been made to minimize the work necessary to execute a quantitative risk assessment. 
+
+ 
+
+The bottom line is that it makes very little sense to execute a risk assessment manually or build one’s own automated tool except in the most extraordinary circumstances. A risk assessment project that requires many work-months to complete manually — with virtually no practical “what-if” capability — can, with sound automated tools, be done in a matter of days, or weeks at worst, with credible, useful results. 
+
+ 
+
+TASKS OF RISK ASSESSMENT 
+
+ 
+
+In this section, we will explore the classic tasks of risk assessment and key issues associated with each task, regardless of the specific approach to be employed. The focus will, in general, be primarily on quantitative methodologies. However, wherever possible, related issues in qualitative methodologies will also be discussed. 
+
+ 
+
+Project Sizing 
+
+ 
+
+In virtually all project methodologies there are a number of elements to be addressed to ensure that all participants, and the target audience, understand and are in agreement about the project. These elements include: 
+
+ 
+
+•  Background 
+
+•  Purpose 
+
+•  Scope 
+
+•  Constraints 
+
+•  Objective 
+
+•  Responsibilities 
+
+•  Approach 
+
+In most cases, it would not be necessary to discuss these individually, as most are well-understood elements of project methodology in general. In fact, they are mentioned here for the exclusive purpose of pointing out the importance of (1) ensuring that there is agreement between the target audience and those responsible for executing the risk assessment, and (2) describing the constraints on a risk assessment project. While a description of the scope — what is included — of a risk assessment project is important, it is equally important to describe specifically, in appropriate terms, what is not included. Typically, a risk assessment is focused on a subset of the organization’s information assets and control functions. If what is not to be included is not identified, confusion and misunderstanding about the risk assessment’s ramifications may result. 
+
+ 
+
+Again, the most important point about the project sizing task is to ensure that the project is clearly defined and that a clear understanding of the project by all parties is achieved. 
+
+Threat Analysis 
+
+ 
+
+In manual approaches and some automated tools, the analyst must determine what threats to consider in a particular risk assessment. Since there is not, at present, a standard threat population and readily available threat statistics, this task can require a considerable research effort. Of even greater concern is the possibility that a significant local threat could be overlooked and associated risks inadvertently accepted. Worse, it is possible that a significant threat is intentionally disregarded. 
+
+ 
+
+The best automated tools currently available include a well-researched threat population and associated statistics. Using one of these tools virtually assures that no relevant threat is overlooked, and associated risks are accepted as a consequence. If, however, a determination has been made not to use one of these leading automated tools and instead to do the threat analysis independently, there are good sources for a number of threats, particularly for all natural disasters, fire, and crime (oddly enough, not so much for computer crime), even falling aircraft. Also, the console log is an excellent source for in-house experience of system development, maintenance, operations, and other events that can be converted into useful threat event statistics with a little tedious review. Finally, in-house physical and logical access logs — assuming such are maintained — can be a good source of related threat event data. 
+
+ 
+
+But, gathering this information independently, even for the experienced risk analyst, is no trivial task. Weeks, if not months, of research and calculation will be required, and, without validation, results may be less than credible. For those determined to proceed independently, the following list of sources, in addition to in-house sources previously mentioned, will be useful: 
+
+ 
+
+Fire — National Fire Protection Association (NFPA) 
+
+Flood, all categories — National Oceanic and Atmospheric Administration (NOAA) and local Flood Control Districts 
+
+Tornado — NOAA 
+
+Hurricane — NOAA and local Flood Control Districts 
+
+Windstorms — NOAA 
+
+Snow — NOAA 
+
+Icing — NOAA 
+
+Earthquakes — U.S. Geological Survey (USGS) and local university geology departments 
+
+Sinkholes — lUSGS and local university geology departments 
+
+Crime — FBI and local law enforcement statistics, and your own in-house crime experience, if any 
+
+Hardware failures — vendor statistics and in-house records 
+
+Until an independent Threats Research Center is established, it will be necessary to rely on automated risk assessment tools, or vendors, or your own research for a good threat population and associated statistics. 
+
+ 
+
+Asset Identification and Valuation 
+
+ 
+
+While all assets may be valued qualitatively, such an approach is useless if there is a need to make well-founded budgetary decisions. Therefore, this discussion of asset identification and valuation will assume a need for the application of monetary valuation. There are two general categories of assets relevant to the assessment of risk in the IT environment: tangible assets, and intangible assets. 
+
+ 
+
+Tangible Assets 
+
+ 
+
+The tangible assets include the IT facilities, hardware, media, supplies, documentation, and IT staff budgets that support the storage, processing, and delivery of information to the user community. The value of these assets is readily determined, typically, in terms of the cost of replacing them. If any of these are leased, of course, the replacement cost may be nil, depending on the terms of the lease. 
+
+ 
+
+Sources for establishing these values are readily found in the associated asset management groups, i.e., facilities management for replacement value of the facilities, hardware management for the replacement value for the hardware — from CPUs to controllers, routers and cabling, annual IT staff budgets for IT staff, etc. 
+
+ 
+
+Intangible Assets 
+
+ 
+
+The intangible assets, which might be better characterized as Information Assets, are comprised of two basic categories: replacement costs for data and software, and the value of the confidentiality, integrity, and availability of information. 
+
+ 
+
+Note that software, as an intellectual property with no physical presence beyond the media upon which it resides, is regarded as an intangible asset. 
+
+ 
+
+Replacement Costs. Replacement costs for data is not usually a complicated task unless source documents don’t exist or are not backed up reliably at a secure off-site location. The bottom line is that “x” amount of data represents “y” key strokes — a time-consuming, but readily measurable manual key entry process. 
+
+ 
+
+Conceivably, source documents can now be electronically “scanned” to recover lost electronically stored data. Clearly, scanning is a more efficient process, but it is still time-consuming. However, if neither source documents nor off-site backups exist, actual replacement may become virtually impossible, and the organization faces the question of whether such a condition can be tolerated. If, in the course of the assessment, this condition is found, the real issue is that the information is no longer available, and a determination must be made as to whether such a condition can be overcome without bankrupting the private sector organization or irrevocably compromising a government mission. 
+
+Value of Confidentiality, Integrity, and Availability. In recent years, a better understanding of the values of confidentiality, integrity, and availability and how to establish these values on a monetary basis with reasonable credibility has been achieved. That understanding is best reflected in the ISSA-published GIV referenced above. These values often represent the most significant “at risk” asset in IT environments. When an organization is deprived of one or more of these with regard to its business or mission information, depending on the nature of that business or mission, there is a very real chance that unacceptable loss will be incurred within a relatively short time. For example, it is well-accepted that a bank that loses access to its business information (loss of availability) for more than a few days is very likely to go bankrupt. 
+
+ 
+
+A brief explanation of each of these three critical values for information is presented below: 
+
+ 
+
+•  Confidentiality is lost or compromised when information is disclosed to parties other than those authorized to have access to the information. In the complex world of IT today, there are many ways for a person to access information without proper authorization if appropriate controls are not in place. Of course, it still remains possible to simply pick up and walk away with confidential documents carelessly left lying about or displayed on an unattended, unsecured PC. 
+
+•  Integrity is the condition that information in or produced by the IT environment accurately reflects the source or process it represents. Integrity may be compromised in many ways, from data entry errors to software errors to intentional modification. Integrity may be thoroughly compromised, for example, by simply contaminating the account numbers of a bank’s demand deposit records. Since the account numbers are a primary reference for all associated data, the information is effectively no longer available. There has been a great deal of discussion about the nature of integrity. Technically, if a single character is wrong in a file with millions of records, the file’s integrity has been compromised. Realistically, however, some expected degree of integrity must be established. In an address file, 99% accuracy (only 1 out of 100 is wrong) may be acceptable. However, in the same file, if each record of 100 characters had only 1 character wrong — in the account number — the records would meet the poorly articulated 99% accuracy standard, but be completely compromised. In other words, the loss of integrity can have consequences that range from trivial to catastrophic. Of course, in a bank with 1 million clients, 99% accuracy means at best that the records of 10,000 clients are in error. In a hospital, even one such error could lead to loss of life! 
+
+•  Availability, the condition that electronically stored information is where it needs to be, when it needs to be there, and in the form necessary, is closely related to the availability of the information processing technology. Whether because the process is unavailable, or the information itself is somehow unavailable, makes no difference to the organization dependent on the information to conduct its business or mission. The value of the information’s availability is reflected in the costs incurred over time by the organization, because the information was not available, regardless of cause. A useful tool (from the Modified Delphi method) for capturing the value of availability — and articulating uncertainty — is illustrated in the chart (Exhibit 3) below. This chart represents the cumulative cost, over time, of the best case and worst-case scenarios, with confidence factors, for the loss of availability of a specific information asset. 
+
+Vulnerability Analysis 
+
+ 
+
+This task consists of the identification of vulnerabilities that would allow threats to occur with greater frequency, greater impact, or both. For maximum utility, this task is best conducted as a series of one-on-one interviews with individual staff members responsible for implementing organizational policy through the management and administration of controls. To maximize consistency and thoroughness, and to minimize subjectivity, the vulnerability analysis should be conducted by an interviewer who guides each interviewee through a well-researched series of questions designed to ferret out all potentially significant vulnerabilities. 
+
+ 
+
+It should be noted that establishment and global acceptance of Generally Accepted System Security Principles, as recommended in the National Research Council report Computers at Risk (12/90), will go far in establishing a globally accepted knowledge base for this task. 
+
+ 
+
+Threat/Vulnerability/Asset Mapping 
+
+ 
+
+Without connecting — mapping — threats to vulnerabilities and vulnerabilities to assets and establishing a consistent way of measuring the consequences of their interrelationships, it becomes nearly impossible to establish the ramifications of vulnerabilities. Of course, intuition and common sense are useful, but how does one measure the risk and support good budgetary management and cost/benefit analysis when the rationale is so abstract? 
+
+ 
+
+For example, it is only good common sense to have logical access control, but how does one justify the expense? We are reminded of a major bank whose management, in a cost-cutting frenzy, came very close to terminating its entire logical access control program! With risk assessment, one can show the expected risk and annualized asset loss/probability coordinates that reflect the ramifications of a wide array of vulnerabilities. Let us carry the illustration further with two basic vulnerabilities (Exhibit 4). 
+
+Risk Metrics/Modeling 
+
+ 
+
+There are a number of ways to portray risk, some qualitative, some quantitative, and some more effective than others. In general, the objective of risk modeling is to convey to decision makers a credible, useable portrayal of the risks associated with the IT environment, (again) answering these questions: 
+
+ 
+
+•  What could happen (threat event)? 
+
+•  How bad would it be (impact)? 
+
+•  How often might it occur (frequency)? 
+
+•  How certain are the answers to the first three questions (uncertainty)? 
+
+With such risk modeling, decision makers are well on their way to making well-informed decisions either to accept, avoid, or transfer associated risk. 
+
+ 
+
+The following brief discussion of the two general categories of approach to these questions, qualitative and quantitative, will give the reader a degree of insight into the ramifications of using one or the other approach. 
+
+ 
+
+Qualitative — The definitive characteristic of the qualitative approach is the use of metrics that are subjective, such as ordinal ranking low, medium, high, etc. In other words, independently objective values such as objectively established monetary value, and recorded history of threat event occurrence (frequency) are not used. 
+
+Quantitative — The definitive characteristic of quantitative approaches is the use of independently objective metrics and significant consideration given to minimizing the subjectivity that is inherent in any risk assessment. Graphics from a leading automated tool will illustrate quantitative risk modeling. 
+
+ 
+
+The graph shown in Exhibit 6 reflects the integrated “all threats” risk that is generated to illustrate the results of Risk Evaluation in BDSS™ before any risk mitigation. The combined value of the tangible and intangible assets at risk is represented on the “Y” axis, and the probability of financial loss is represented on the “X” axis. Thus, reading this graphic model, there is a 1/10 chance of losing about $0.5M over a 1-year period. 
+
+The graph shown in Exhibit 7 reflects the same environment after risk mitigation and associated cost/benefit analysis. The original risk curve (Exhibit 6) is shown with the reduced risk curve and associated average annual cost of all recommended safeguards superimposed on it so the viewer can see the risk before risk mitigation, the expected reduction in risk, and the cost to achieve it. In Exhibit 7, the risk at 1/10 and 1/100 chance of loss is now minimal, and the risk at 1/1000 chance of loss has been reduced from about $2.0M to about $0.3M. The suggested safeguards are thus shown to be well justified. 
+
+RISK MITIGATION ANALYSIS 
+
+ 
+
+With the completion of the risk modeling and associated report on the observed status of information security and related issues, management will almost certainly find some areas of risk that they are unwilling to accept and for which they wish to see proposed risk mitigation analysis. In other words, they will want answers to the last three questions for those unacceptable risks: 
+
+ 
+
+•  What can be done? 
+
+•  How much will it cost? 
+
+•  Is it cost effective? 
+
+There are three steps in this process: 
+
+ 
+
+•  Safeguard Analysis and Expected Risk Reduction 
+
+•  Safeguard Costing 
+
+•  Safeguard Cost/Benefit Analysis 
+
+Safeguard Analysis and Expected Risk Reduction 
+
+ 
+
+With guidance from the results of the Risk Evaluation, including modeling and associated data collection tasks, and reflecting management concerns, the analyst will seek to identify and apply safeguards that could be expected to mitigate the vulnerabilities of greatest concern to management. Management will, of course, be most concerned about those vulnerabilities that could allow the greatest loss expectancies for one or more threats, or those subject to regulatory or contractual compliance. The analyst, to do this step manually, must first select appropriate safeguards for each targeted vulnerability; second, map or confirm mapping, safeguard/vulnerability pairs to all related threats; and third, determine, for each threat, the extent of asset risk reduction to be achieved by applying the safeguard. In other words, for each affected threat, determine whether the selected safeguard(s) will reduce threat frequency, reduce threat exposure factors, or both, and to what degree. 
+
+ 
+
+Done manually, this step will consume many days or weeks of tedious work effort. Any “What if” assessment will be very time-consuming as well. When this step is executed with the support of a knowledge-based expert automated tool, however, only a few hours to a couple of days are expended, at most. 
+
+ 
+
+Safeguard Costing 
+
+ 
+
+In order to perform useful cost/benefit analysis, estimated costs for all suggested safeguards must be developed. While these cost estimates should be reasonably accurate, it is not necessary that they be precise. However, if one is to err at this point, it is better to overstate costs. Then, as bids or detailed cost proposals come in, it is more likely that cost/benefit analysis results, as shown below, will not overstate the benefit. 
+
+ 
+
+There are two basic categories of costing for safeguards: cost per square foot, installed, and time and materials. In both cases, the expected life and annual maintenance costs must be included to get the average annual cost over the life of the safeguard. An example of each is provided in Exhibits 8 and 9. 
+
+These Average Annual Costs represent the break-even point for safeguard cost/benefit assessment for each safeguard. In these examples, discrete, single-point values have been used to simplify the illustration. At least one of the leading automated risk assessment tools allows the analyst to input bounded distributions with associated confidence factors to articulate explicitly the uncertainty of the values for these preliminary cost estimates. These bounded distributions with confidence factors facilitate the best use of optimal probabilistic analysis algorithms. 
+
+AUTOMATED TOOLS 
+
+ 
+
+The following products represent a broad spectrum of automated risk assessment tools ranging from the comprehensive, knowledge-based expert system BDSS™ to RiskCalc, a simple risk assessment shell with provision for user-generated algorithms and a framework for data collection and mapping. 
+
+ 
+
+ARES, Air Force Communications and Computer Security Management Office, Kelly AFB, TX. 
+
+@RISK, Palisade Corp., Newfield, NY. 
+
+Bayesian Decision Support System (BDSS), OPA, Inc., The Integrated Risk Management Group, Petaluma, CA. 
+
+Control Matrix Methodology for Microcomputers. Jerry FitzGerald & Associates, Redwood City, CA. 
+
+COSSAC, Computer Protection Systems Inc., Plymouth, MI. 
+
+CRITI-CALC, International Security Technology, Reston, VA. 
+
+CRAMM, Executive Resources Association, Arlington, VA. 
+
+GRA/SYS, Nander Brown & Co., Reston, VA. 
+
+IST/RAMP, International Security Technology, Reston, VA. 
+
+JANBER, Eagon, McAllister Associates Inc., Lexington Park, MD. 
+
+LAVA, Los Alamos National Laboratory, Los Alamos, NM. 
+
+LRAM, Livermore National Laboratory, Livermore, CA. 
+
+MARION, Coopers & Lybrand (U.K.-based), London, England. 
+
+Micro Secure Self Assessment, Boden Associates, East Williston, NY. 
+
+Predictor, Concorde Group International, Westport, CT. 
+
+PRISM, Palisade Corp., Newfield, NY. 
+
+QuikRisk, Basic Data Systems, Rockville, MD. 
+
+RA/SYS, Nander Brown & Co. Reston, VA. 
+
+RANK-IT, Jerry FitzGerald & Associates, Redwood City, CA. 
+
+RISKCALC, Hoffman Business Associates Inc., Bethesda, MD. 
+
+RISKPAC, Profile Assessment Corp., Ridgefield, CT. 
+
+RISKWATCH, Expert Systems Software Inc., Long Beach, CA. 
+
+The Buddy System Risk Assessment and Management System for Microcomputers, Countermeasures, Inc., Hollywood, MD. 
+
+SUMMARY 
+
+ 
+
+While the dialogue on risk assessment continues, management increasingly is finding utility in the technology of risk assessment. Readers should, if possible, given the culture of their organization, make every effort to assess the risks in the subject IT environments using automated, quantitatively oriented tools. If there is strong resistance to using quantitative tools, then proceed with an initial approach using a qualitative tool. But do start the risk assessment process! 
+
+ 
+
+Work on automated tools continues to improve their utility and credibility. More and more of the “Big 6” and other major consultancies, including those in the insurance industry, are offering risk assessment services using, or planning to use, quantitative tools. Managing risk is the central issue of information security. Risk assessment with automated tools provides organizational management with sound insight on their risks and how best to manage them and reduce liability costs effectively. 
+
+ 
+
+Quantitative risk assessment draws upon methodologies used by financial institutions and insurance companies. By assigning values to information, systems, business processes, recovery costs, etc., impact, and therefore risk, can be measured in terms of direct and indirect costs.  
+
+Mathematically, quantitative risk can be expressed as Annualized Loss Expectancy (ALE). ALE is the expected monetary loss that can be expected for an asset due to a risk being realized over a one-year period. ALE = SLE * ARO: This fits into the financial Risk category……Not infosec. 
+
+This is inappropriate for information security risk assessments as InfoRisk can not always be monitorised. Not all assets can be given a value. How do you give integrity an asset value using the above. Therefore we need to look at a different way of assessing risk. What is the info Risk?  
+
+ 
+
+Before the event, preventive controls are intended to prevent an incident from occurring e.g. by locking out unauthorized intruders; 
+
+During the event, detective controls are intended to identify and characterize an incident in progress e.g. by sounding the intruder alarm and alerting the security guards or police; 
+
+After the event, corrective controls are intended to limit the extent of any damage caused by the incident e.g. by recovering the organization to normal working status as efficiently as possible. 
+
+Directive Controls are to trigger a desired behaviour or event to occur. 
+
+Policies and procedures 
+
+Laws and regulations 
+
+Training seminars 
+
+Job descriptions 
+
+Meetings 
+
+There are three types of Internal controls that exist in an organisation, they include:  
+
+Directive or entity level controls: Directive controls relate to high level direction from legislators, governance bodies, senior management, standards organisations and other accountable individuals and groups to promote compliance with independence rules for e.g. legislation and policies.  
+
+Preventive: Preventive controls attempt to deter or prevent undesirable events from occurring, they are measures taken to deter non-compliance with policies and procedures. Examples may include separation of duties, proper authorisation, adequate documentation and physical control over assets.  
+
+Detective / Corrective: Detective / corrective controls are aimed at uncovering problems after they have occurred i.e. to detect undesirable acts but do not prevent a loss/undesirable event from occurring. Examples of detective / corrective controls are reviews, analyses, variance analysis, reconciliations, physical inventories and audits.  
+
+In addition to this, compensating controls also exist in an organisation.  
+
+Compensating controls: Are intended to make up for a lack of controls elsewhere in the system. They generally occur after the transaction is complete (post audit.). Also, it takes more resources to investigate and correct errors and to recover losses than it does to prevent the errors in the first place. However, in some rare circumstances, organisational units do not have the staff resources to establish adequate segregation of duties. In these instances, it is important for management to implement internal controls that compensate for this increased risk. 
+
+In some settings, corrective action is used as an encompassing term that includes remedial actions, corrective actions and preventive actions. 
+
+In terms of taxonomy, there are three, commonly accepted forms of Controls: 
+
+ 
+
+Administrative - These are the laws, regulations, policies, practices and guidelines that govern the overall requirements and controls for an Information Security or other operational risk program. For example, a law or regulation may require merchants and financial institutions to protect and implement controls for customer account data to prevent identity theft. The business, in order to comply with the law or regulation, may adopt policies and procedures laying out the internal requirements for protecting this data, which requirements are a form of control. 
+
+Logical - These are the virtual, application and technical controls (systems and software), such as firewalls, anti virus software, encryption and maker/checker application routines. 
+
+Physical - Whereas a firewall provides a "logical" key to obtain access to a network, a "physical" key to a door can be used to gain access to an office space or storage room. Other examples of physical controls are video surveillance systems, gates and barricades, the use of guards or other personnel to govern access to an office, and remote backup facilities. 
+
+All three of these elements are critical to the creation of an effective control environment. However, these elements do not provide clear guidance on measuring the degree to which the controls mitigate the risk. Instead, the Simple Risk Model utilizes an alternative set of elements that provide a better means of weighting the level of mitigation: 
+
+Preventive - These are controls that prevent the loss or harm from occurring. For example, a control that enforces segregation of responsibilities (one person can submit a payment request, but a second person must authorize it), minimizes the chance an employee can issue fraudulent payments. 
+
+Detective - These controls monitor activity to identify instances where practices or procedures were not followed. For example, a business might reconcile the general ledger or review payment request audit logs to identify fraudulent payments. 
+
+Corrective - Corrective controls restore the system or process back to the state prior to a harmful event. For example, a business may implement a full restoration of a system from backup tapes after evidence is found that someone has improperly altered the payment data. 
+
+Of the three types of controls, preventative controls are clearly the best, since they minimize the possibility of loss by preventing the event from occurring. Corrective controls are next in line, since they minimize the impact of the loss by restoring the system to the point before the event. However, the restoration procedure may result in some degree of loss, since the restoration procedure may lead to the unavailability of systems and applications along with possible lost productivity, customer dissatisfaction, etc. The least effective form of control, but the one most frequently used, is detective controls - identifying events after they have happened. Depending on how soon the detective control is invoked after an event, a business may uncover a loss long after there is any opportunity to limit the amount of damages. In the Proof-of-Concept application, the Control is weighted by whether it is a preventative, detective or corrective control. 
+
+One other valuable distinction to be made with controls is whether they are manual or automated. A business can implement manual controls to minimize the chance of fraudulent payments, such as requiring an administrator and a manager to manually sign the applicable paperwork to indicate that the transaction was authorized and approved. As an alternative, the business could automate these controls by introducing a computer program with logical access, segregation of duties and maker/checker controls. 
+
+Page Break
+ 
+
+Controls for providing information security can be physical, technical, or administrative. These three categories of controls can be further classified as either preventive or detective.  
+
+Preventive controls attempt to avoid the occurrence of unwanted events, whereas detective controls attempt to identify unwanted events after they have occurred. Preventive controls inhibit the free use of computing resources and therefore can be applied only to the degree that the users are willing to accept. Effective security awareness programs can help increase users’ level of tolerance for preventive controls by helping them understand how such controls enable them to trust their computing systems. Common detective controls include audit trails, intrusion detection methods, and checksums. 
+
+Three other types of controls supplement preventive and detective controls. They are usually described as deterrent, corrective, and recovery. Deterrent controls are intended to discourage individuals from intentionally violating information security policies or procedures. These usually take the form of constraints that make it difficult or undesirable to perform unauthorized activities or threats of consequences that influence a potential intruder to not violate security (e.g., threats ranging from embarrassment to severe punishment). 
+
+Corrective controls either remedy the circumstances that allowed the unauthorized activity or return conditions to what they were before the violation. Execution of corrective controls could result in changes to existing physical, technical, and administrative controls. Recovery controls restore lost computing resources or capabilities and help the organization recover monetary losses caused by a security violation. 
+
+Deterrent, corrective, and recovery controls are considered to be special cases within the major categories of physical, technical, and administrative controls; they do not clearly belong in either preventive or detective categories. For example, it could be argued that deterrence is a form of prevention because it can cause an intruder to turn away; however, deterrence also involves detecting violations, which may be what the intruder fears most. Corrective controls, on the other hand, are not preventive or detective, but they are clearly linked with technical controls when antiviral software eradicates a virus or with administrative controls when backup procedures enable restoring a damaged data base. Finally, recovery controls are neither preventive nor detective but are included in administrative controls as disaster recovery or contingency plans. 
+
+Because of these overlaps with physical, technical, and administrative controls, the deterrent, corrective, and recovery controls are not discussed further. 
+
+Preventive Technical Controls 
+
+Preventive technical controls are used to prevent unauthorized personnel or programs from gaining remote access to computing resources. Examples of these controls include: 
+
+Access control software. 
+
+Antivirus software. 
+
+Library control systems. 
+
+Passwords. 
+
+Smart cards. 
+
+Encryption. 
+
+Dial-up access control and callback systems. 
+
+Access Control Software 
+
+The purpose of access control software is to control sharing of data and programs between users. In many computer systems, access to data and programs is implemented by access control lists that designate which users are allowed access. Access control software provides the ability to control access to the system by establishing that only registered users with an authorized log-on ID and password can gain access to the computer system. 
+
+After access to the system has been granted, the next step is to control access to the data and programs residing in the system. The data or program owner can establish rules that designate who is authorized to use the data or program. 
+
+Antivirus Software 
+
+Viruses have reached epidemic proportions throughout the microcomputing world and can cause processing disruptions and loss of data as well as significant loss of productivity while cleanup is conducted. In addition, new viruses are emerging at an ever-increasing rate — currently about one every 48 hours. It is recommended that antivirus software be installed on all microcomputers to detect, identify, isolate, and eradicate viruses. This software must be updated frequently to help fight new viruses. In addition, to help ensure that viruses are intercepted as early as possible, antivirus software should be kept active on a system, not used intermittently at the discretion of users. 
+
+Library Control Systems 
+
+These systems require that all changes to production programs be implemented by library control personnel instead of the programmers who created the changes. This practice ensures separation of duties, which helps prevent unauthorized changes to production programs. 
+
+Passwords 
+
+Passwords are used to verify that the user of an ID is the owner of the ID. The ID-password combination is unique to each user and therefore provides a means of holding users accountable for their activity on the system. 
+
+Fixed passwords that are used for a defined period of time are often easy for hackers to compromise; therefore, great care must be exercised to ensure that these passwords do not appear in any dictionary. Fixed passwords are often used to control access to specific data bases. In this use, however, all persons who have authorized access to the data base use the same password; therefore, no accountability can be achieved. 
+
+Currently, dynamic or one-time passwords, which are different for each log-on, are preferred over fixed passwords. Dynamic passwords are created by a token that is programmed to generate passwords randomly. 
+
+Smart Cards 
+
+Smart cards are usually about the size of a credit card and contain a chip with logic functions and information that can be read at a remote terminal to identify a specific user’s privileges. Smart cards now carry prerecorded, usually encrypted access control information that is compared with data that the user provides (e.g., a personal ID number or biometric data) to verify authorization to access the computer or network. 
+
+Encryption 
+
+ 
+
+Encryption is defined as the transformation of plaintext (i.e., readable data) into ciphertext (i.e., unreadable data) by cryptographic techniques. Encryption is currently considered to be the only sure way of protecting data from disclosure during network transmissions. 
+
+ 
+
+Encryption can be implemented with either hardware or software. Software-based encryption is the least expensive method and is suitable for applications involving low-volume transmissions; the use of software for large volumes of data results in an unacceptable increase in processing costs. Because there is no overhead associated with hardware encryption, this method is preferred when large volumes of data are involved. 
+
+ 
+
+Dial-Up Access Control and Callback Systems 
+
+ 
+
+Dial-up access to a computer system increases the risk of intrusion by hackers. In networks that contain personal computers or are connected to other networks, it is difficult to determine whether dial-up access is available or not because of the ease with which a modem can be added to a personal computer to turn it into a dial-up access point. Known dial-up access points should be controlled so that only authorized dial-up users can get through. 
+
+ 
+
+Currently, the best dial-up access controls use a microcomputer to intercept calls, verify the identity of the caller (using a dynamic password mechanism), and switch the user to authorized computing resources as requested. Previously, call-back systems intercepted dial-up callers, verified their authorization and called them back at their registered number, which at first proved effective; however, sophisticated hackers have learned how to defeat this control using call-forwarding techniques. 
+
+ 
+
+Detective Technical Controls 
+
+ 
+
+Detective technical controls warn personnel of violations or attempted violations of preventive technical controls. Examples of these include audit trails and intrusion detection expert systems, which are discussed in the following sections. 
+
+ 
+
+Audit Trails 
+
+ 
+
+An audit trail is a record of system activities that enables the reconstruction and examination of the sequence of events of a transaction, from its inception to output of final results. Violation reports present significant, security-oriented events that may indicate either actual or attempted policy transgressions reflected in the audit trail. Violation reports should be frequently and regularly reviewed by security officers and data base owners to identify and investigate successful or unsuccessful unauthorized accesses. 
+
+ 
+
+Intrusion Detection Systems 
+
+ 
+
+These expert systems track users (on the basis of their personal profiles) while they are using the system to determine whether their current activities are consistent with an established norm. If not, the user’s session can be terminated or a security officer can be called to investigate. Intrusion detection can be especially effective in cases in which intruders are pretending to be authorized users or when authorized users are involved in unauthorized activities. 
+
+ 
+
+ADMINISTRATIVE CONTROLS 
+
+ 
+
+Administrative, or personnel, security consists of management constraints, operational procedures, accountability procedures, and supplemental administrative controls established to provide an acceptable level of protection for computing resources. In addition, administrative controls include procedures established to ensure that all personnel who have access to computing resources have the required authorizations and appropriate security clearances. 
+
+ 
+
+Preventive Administrative Controls 
+
+ 
+
+Preventive administrative controls are personnel-oriented techniques for controlling people’s behavior to ensure the confidentiality, integrity, and availability of computing data and programs. Examples of preventive administrative controls include: 
+
+ 
+
+•  Security awareness and technical training. 
+
+•  Separation of duties. 
+
+•  Procedures for recruiting and terminating employees. 
+
+•  Security policies and procedures. 
+
+•  Supervision. 
+
+•  Disaster recovery, contingency, and emergency plans. 
+
+•  User registration for computer access. 
+
+Security Awareness and Technical Training 
+
+ 
+
+Security awareness training is a preventive measure that helps users to understand the benefits of security practices. If employees do not understand the need for the controls being imposed, they may eventually circumvent them and thereby weaken the security program or render it ineffective. 
+
+ 
+
+Technical training can help users prevent the most common security problem — errors and omissions — as well as ensure that they understand how to make appropriate backup files and detect and control viruses. Technical training in the form of emergency and fire drills for operations personnel can ensure that proper action will be taken to prevent such events from escalating into disasters. 
+
+ 
+
+Separation of Duties 
+
+ 
+
+This administrative control separates a process into component parts, with different users responsible for different parts of the process. Judicious separation of duties prevents one individual from obtaining control of an entire process and forces collusion with others in order to manipulate the process for personal gain. 
+
+ 
